@@ -29,7 +29,7 @@
     <!-- Sign-up form start -->
 
     <main>
-      <div class="container">
+      <section class="container">
         <div class="form__container">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -39,8 +39,12 @@
             <li>And much more!</li>
           </ul>
           <form>
-            <label for="email"> Email address </label>
+            <div class="labels">
+              <label for="email"> Email address </label>
+              <p class="error">Valid email required</p>
+            </div>
             <input type="text" id="email" placeholder="email@company.com" />
+
             <button>Subscribe to monthly newsletter</button>
           </form>
         </div>
@@ -56,25 +60,27 @@
             alt="mobile image ui"
           />
         </div>
-      </div>
+      </section>
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+      <section class="modal">
+        <div class="modal__container">
+          <div>
+            <img src="assets/images/icon-success.svg" alt="success icon" />
+            <h2>Thanks for subscribing!</h2>
+            <p>
+              A confirmation email has been sent to
+              <output id="user__email"></output>. Please open it and click the
+              button inside to confirm your subscription.
+            </p>
+          </div>
+          <button class="modal__close">Dismiss message</button>
+        </div>
+      </section>
+      <!-- Success message end -->
     </main>
 
-    <!-- Sign-up form end -->
-
-    <!-- Success message start -->
-
-    <div class="modal">
-      <div class="modal__container">
-        <h2>Thanks for subscribing!</h2>
-        <p>
-          A confirmation email has been sent to
-          <output id="user__email"></output>. Please open it and click the
-          button inside to confirm your subscription.
-        </p>
-        <button class="modal__close">Dismiss message</button>
-      </div>
-    </div>
-
-    <!-- Success message end -->
+    <script src="app.js"></script>
   </body>
 </html>
